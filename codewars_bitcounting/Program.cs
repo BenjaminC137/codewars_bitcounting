@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace codewars_bitcounting
 {
@@ -6,8 +7,19 @@ namespace codewars_bitcounting
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+        
+            Console.WriteLine(CountBits(10));
         }
+        
+        public static int CountBits(int n)
+        {
+            string bitValue = Convert.ToString(n, 2);
+            Console.WriteLine(bitValue);                  
+            bitValue = bitValue.Replace("0", "");
+            Console.WriteLine(bitValue);
+            int bl = bitValue.Length;
+            return bl;
+        }    
     }
 }
 
